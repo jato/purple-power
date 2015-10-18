@@ -14,4 +14,21 @@ class Pizza
     @@list.include?(pizza_name)
   end
 
+  def self.destroy(pizza_name)
+    @@list.delete(pizza_name)
+  end
+
+  def self.update(old_name, new_name)
+    idx = @@list.index(old_name)
+    @@list[idx] = new_name
+  end
+
 end
+
+
+
+
+
+
+
+

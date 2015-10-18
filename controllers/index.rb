@@ -32,6 +32,21 @@ get '/pizzas/:pizza_name' do
   end
 end
 
+post '/pizzas/:pizza_name/delete' do
+  # delete code in here???
+  Pizza.destroy(params[:pizza_name])
+  redirect '/pizzas'
+end
+
+post '/pizzas/:pizza_name/update' do
+  ap params
+  Pizza.update(params[:pizza_name], params[:new_name])
+  redirect '/pizzas'
+end
+
+
+
+
 
 
 

@@ -1,7 +1,9 @@
+<a href="/pizzas/new">Add new pizza!</a>
+
 <h4>Here is the list of all pizzas</h4>
 
 <ul>
 <% @pizzas.each do |pizza| %>
-  <li><%= pizza %></li>
+  <li><a href="/pizzas/<%= pizza %>"><%= pizza %></a></li>
 <% end %>
 </ul>

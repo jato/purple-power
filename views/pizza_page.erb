@@ -1,3 +1,13 @@
 <h1>this is the page for <%= @pizza %></h1>
 
 <h2>here would be some hypothetical info.</h2>
+
+<form method="POST" action="/pizzas/<%= @pizza %>/delete">
+  <input type="submit" value="delete this pizza">
+</form>
+
+<form method="POST" action="/pizzas/<%= @pizza %>/update">
+  <input type="text" name="new_name" placeholder="new pizza name">
+  <!-- <input type="hidden" name="old_name" value="#@pizza"> -->
+  <input type="submit" value="update">
+</form>
