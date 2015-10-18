@@ -1,3 +1,3 @@
 get '/' do
-  ap "hello martins"
+  erb :index
 end
