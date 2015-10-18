@@ -21,6 +21,16 @@ post '/pizzas/create' do
   redirect '/pizzas'
 end
 
+# render a specific page for pizza
+# if it doesn't exist, go back to list
+get '/pizzas/:pizza_name' do
+  if Pizza.exists?(params[:pizza_name])
+    @pizza = params[:pizza_name]
+    erb :pizza_page
+  else
+    redirect '/pizzas'
+  end
+end
 
 
 

@@ -10,4 +10,8 @@ class Pizza
     @@list << pizza_name
   end
 
+  def self.exists?(pizza_name)
+    @@list.include?(pizza_name)
+  end
+
 end
